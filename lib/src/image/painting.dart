@@ -198,14 +198,14 @@ void paintExtendedImage(
         alignment.inscribe(sourceSize, Offset.zero & inputSize);
     if (repeat == ImageRepeat.noRepeat) {
       canvas.drawImageRect(image, sourceRect, destinationRect, paint);
-    } else {
+    }/* else {
       final ImageTilingInfo info =
           createTilingInfo(repeat, rect, destinationRect, sourceRect);
       final ImageShader shader = ImageShader(
           image, info.tmx, info.tmy, info.transform.storage,
           filterQuality: filterQuality);
       canvas.drawRect(rect, paint..shader = shader);
-    }
+    }*/
   } else {
     canvas.scale(1 / scale);
     if (repeat == ImageRepeat.noRepeat) {
